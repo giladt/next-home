@@ -1,6 +1,6 @@
 import fs from 'fs'
 
-const dataPath = `data/payments.json`
+const dataPath = `./data/payments.json`
 
 const readFile = (
   callback: Function,
@@ -8,7 +8,7 @@ const readFile = (
   filePath: string = dataPath,
   encoding: string = `utf8`
 ) => {
-  fs.readFile( filePath, encoding, ( err, data ) => {
+  fs.readFile( filePath, encoding, ( err: Error, data: string) => {
     if ( err ) return err
 
     return callback( returnJson ? JSON.parse( data ) : data )
@@ -16,12 +16,12 @@ const readFile = (
 }
 
 const writeFile = (
-  fileData,
-  callback,
-  filePath = dataPath,
-  encoding = `utf8`
+  fileData: string,
+  callback: Function,
+  filePath: string = dataPath,
+  encoding: string = `utf8`
 ) => {
-  fs.writeFile( filePath, fileData, encoding, err => {
+  fs.writeFile( filePath, fileData, encoding, (err:Error) => {
     if ( err ) throw err
 
     return callback()
