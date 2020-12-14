@@ -1,30 +1,46 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+## Installation
 
-## Getting Started
+Clone this repo to your local machine and _cd_ into _next-home_ folder.
 
-First, run the development server:
-
+Then run:
 ```bash
+npm install
 npm run dev
 # or
+yarn install
 yarn dev
 ```
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-You can start editing the page by modifying `pages/index.js`. The page auto-updates as you edit the file.
+---
 
-## Learn More
+## Routes
 
-To learn more about Next.js, take a look at the following resources:
+### Backend
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+```
+/api/v1/payments/<Contract Id>/read?startDate=<Start Date>&endDate=<End Date>
+```
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+```
+/api/v1/payments/<Contract Id>/create
+```
 
-## Deploy on Vercel
+```
+/api/v1/payments/<id>/update
+```
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/import?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+```
+/api/v1/payments/<id>/delete
+```
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+Basic starter data file is available under ```/data/payments.json```
+
+### Frontend
+
+To see the frontend challenge result, navigate to:
+```
+/user-form
+```
+
