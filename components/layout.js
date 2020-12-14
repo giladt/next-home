@@ -82,6 +82,7 @@ export default function Layout ( { title, children, actions } ) {
               <Avatar alt="HOME.ht" src="/home-logo.svg" />
             }
             title={
+              ( actions.step > 0 ) &&
               <Box display="flex" justifyContent="center" alignItems="center">
                 <Box width="100%" mr={ 1 }>
                   <LinearProgress variant="determinate" value={ ( ( actions.step - 1 ) / ( steps.length - 1 ) ) * 100 } />
