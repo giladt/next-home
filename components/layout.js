@@ -1,5 +1,5 @@
 import { useRouter } from 'next/router'
-import { MuiThemeProvider } from 'material-ui/styles'
+import { MuiThemeProvider } from '@material-ui/core/styles'
 import { makeStyles } from '@material-ui/core/styles'
 
 import {
