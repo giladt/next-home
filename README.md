@@ -1,3 +1,5 @@
+[Live Demo](https://next-home.vercel.app)
+
 ## Installation
 
 Clone this repo to your local machine and _cd_ into _next-home_ folder.
